@@ -3,7 +3,6 @@ import {
   lerLocalstorage,
   apagarDoLocalStorage,
   salvarLocalstorage,
-  
 } from "/src/utilidades.js";
 
 function desenharProdutosCheckout() {
@@ -37,7 +36,8 @@ function finalizarCompra(evento) {
 
   apagarDoLocalStorage("carrinho");
 
-  window.location.href = window.location.origin + "/pedidos.html";
+  window.location.href =
+    window.location.origin + "magazine-prodigium/pedidos.html";
 }
 
 desenharProdutosCheckout();
