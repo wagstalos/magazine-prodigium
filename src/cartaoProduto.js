@@ -11,7 +11,7 @@ export function renderizarCatalago() {
         <i class="fa-regular fa-heart text-teal-300 absolute top-4 right-4 z-10 cursor-pointer"></i>  
      
         <img class="h-100 rounded-xl group-hover:scale-105 duration-200"
-                  src="../assets/img/${produtoCatalogo.imagem}"
+                  src="./assets/img/${produtoCatalogo.imagem}"
                   alt="${produtoCatalogo.nome}."
               />
               <p class="px-2 text-sm font-medium text-slate-400 mt-4"><i class="fa-solid fa-bolt"></i>${

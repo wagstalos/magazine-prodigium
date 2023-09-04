@@ -17,7 +17,7 @@ function irParaCheckout() {
     return;
   }
 
-  window.location.href = window.location.origin + "/checkout.html";
+  window.location.href = window.location.origin + "./checkout.html";
 }
 
 export function inicializarCarrinho() {
@@ -84,7 +84,7 @@ function desenharProdutonoCarrinho(idProduto) {
       <i class="fa-solid fa-trash text-red-600 hover:text-red-700"></i>
     </button>
 
-    <img src="../assets/img/${produto.imagem}" alt="${
+    <img src="./assets/img/${produto.imagem}" alt="${
     produto.nome
   }" class="h-24 rounded-lg">
 
