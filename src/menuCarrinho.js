@@ -17,7 +17,7 @@ function irParaCheckout() {
     return;
   }
 
-  window.location.href = window.location.href + "checkout.html";
+  window.location.href = window.location.origin + "/checkout.html";
 }
 
 export function inicializarCarrinho() {
@@ -98,16 +98,16 @@ function desenharProdutonoCarrinho(idProduto) {
       )}</p>
     </div>
 
-    <div class="flex text-slate-950 items-end absolute bottom-0 right-2 text-lg">
+    <div class="flex text-slate-950 items-end absolute bottom-0 right-2 text-lg mb-1">
         <button id='decrementar-produto-${
           produto.id
-        }' class="font-semibold "><i class="fa-solid fa-minus"></i></button>
-        <p id="quantidade-${produto.id}" class="ml-2">${
+        }' class="font-semibold bg-teal-300 px-1 text-slate-100 rounded-l-lg"><i class="fa-solid fa-minus"></i></button>
+        <p id="quantidade-${produto.id}" class="bg-slate-200 px-2">${
     idsProdutosCarrinhoComQuantidade[produto.id]
   }</p>
         <button id='incrementar-produto-${
           produto.id
-        }' class="ml-2 font-semibold "><i class="fa-solid fa-plus"></i></button>
+        }' class="font-semibold bg-teal-300 px-1 text-slate-100 rounded-r-lg"><i class="fa-solid fa-plus"></i></button>
     </div>
     `;
 
