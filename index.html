@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodigium</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-stone-200 flexflex-col">
+    <section class="fixed top-0 right-[-360px] 
+                bg-slate-950 h-screen w-[360px] 
+                text-slate-200 z-50 duration-200 
+                  border-l border-slate-200 p-5 flex flex-col justify-between" id="carrinho">
+        <div id="cabecalho-carrinho" class="flex justify-between m-4">
+            <p>Meu carrinho</p>
+            <button id="fechar-carrinho"><i class="fa-solid fa-circle-xmark"></i></button>
+        </div>
+
+        <section id="produtos-carrinho" class="h-3/5 overflow-y-auto"></section>
+
+        <div class="flex flex-col">
+            <div class="flex justify-between">
+                <p class="mb-4 font-semibold text-lg">Subtotal:</p>
+                <span id="preco-total" class="font-semibold shadow-slate-400 text-lg">R$ 0</span>
+            </div>
+
+            <button id="finalizar-compra"
+                class="bg-slate-200 text-slate-900 p-2  font-semibold hover:text-slate-900 hover:bg-slate-400">Finalizar
+                Compra</button>
+        </div>
+
+    </section>
+
+    <header class="flex text-xl justify-between bg-slate-950 shadow-lg shadow-slate-400 px-8 py-4 sticky top-0 z-20">
+        <a href="/">
+            <img class="h-8 lg:h-16" src="https://wpsgames.com.br/sites/prodigium/img/logo1.png" alt="logotipo">
+        </a>
+
+        <div class="text-slate-200 flex gap-2 items-end mx-2">
+            <a href="/pedidos.html">
+                <button><i class="fa-solid fa-user text-teal-300"></i></button>
+            </a>
+
+            <button id="abrir-carrinho" class="mx-2"><i class="fa-solid fa-cart-shopping text-teal-300"></i></button>
+        </div>
+    </header>
+
+    <main class="flex flex-col items-center">
+        <section id="filtros" class="mt-10 flex border bg-slate-100 border-slate-300 rounded-full py-2">
+            <div class="">
+                <input id="exibir-todos" type="radio" name="filtro" class="peer hidden" checked>
+                <label for="exibir-todos"
+                    class="peer-checked:bg-slate-800 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-full cursor-pointer select-none">Todos
+                </label>
+            </div>
+
+            <div class="">
+                <input id="exibir-masculinos" type="radio" name="filtro" class="peer hidden">
+                <label for="exibir-masculinos"
+                    class="peer-checked:bg-slate-800 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-full cursor-pointer select-none">Whey
+                </label>
+            </div>
+
+            <div class="">
+                <input id="exibir-femininos" type="radio" name="filtro" class="peer hidden">
+                <label for="exibir-femininos"
+                    class="peer-checked:bg-slate-800 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-full cursor-pointer select-none">Outros
+                </label>
+            </div>
+
+        </section>
+
+        <section id="container-produto" class="flex flex-wrap p-5 justify-center gap-5 font-sans">
+
+        </section>
+
+        <div id="success" class="alert text-center py-4 lg:px-4 fixed z-30 hidden">
+            <div class="p-2 bg-emerald-500 items-center text-slate-100 leading-none rounded-full flex lg:inline-flex"
+                role="alert">
+                <span class="flex rounded-full bg-emerald-400 uppercase px-2 py-1 text-xs font-bold mr-3"><i
+                        class="fa-solid fa-basket-shopping"></i></span>
+                <span class="font-semibold mr-2 text-left flex-aut">Produto adicionado com sucesso!</span>
+                <!-- <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+          <path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z" />
+        </svg> -->
+            </div>
+        </div>
+
+        <div id="add-wish" class="alert text-center py-4 lg:px-4 fixed z-30 hidden">
+            <div class="p-2 bg-pink-500 items-center text-slate-100 leading-none rounded-full flex lg:inline-flex"
+                role="alert">
+                <span class="flex rounded-full bg-pink-400 uppercase px-2 py-1 text-xs font-bold mr-3"><i
+                        class="fa-solid fa-heart"></i></span>
+                <span class="font-semibold mr-2 text-left flex-aut">Produto adicionado aos favoritos</span>
+            </div>
+        </div>
+
+    </main>
+    <script type="module" src="/main.js"></script>
+</body>
+
+
+</html>
