@@ -49,7 +49,7 @@ export function renderizarCatalago() {
 
               <button id='adicionar-${
                 produtoCatalogo.id
-              }' class="h-10 px-6 font-semibold rounded-md bg-black hover:bg-slate-800 text-white"><i class="fa-solid fa-cart-plus"></i></button>
+              }' class="h-10 px-6 font-semibold rounded-md bg-gray-800 hover:bg-slate-900 text-white"><i class="fa-solid fa-cart-plus mr-2"></i> Adicionar ao carrinho</button>
           </div>`;
 
     document.getElementById("container-produto").innerHTML += cartaoProduto;
