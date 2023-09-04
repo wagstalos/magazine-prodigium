@@ -36,8 +36,7 @@ function finalizarCompra(evento) {
 
   apagarDoLocalStorage("carrinho");
 
-  window.location.href =
-    window.location.origin + "./magazine-prodigium/pedidos.html";
+  window.location.href = window.location.href + "/pedidos.html";
 }
 
 desenharProdutosCheckout();
