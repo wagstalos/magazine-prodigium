@@ -18,7 +18,7 @@ function irParaCheckout() {
   }
 
   window.location.href =
-    window.location.origin + "magazine-prodigium/checkout.html";
+    window.location.origin + "./magazine-prodigium/checkout.html";
 }
 
 export function inicializarCarrinho() {
